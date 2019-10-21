@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background : url(foto/bg1.jpg) no-repeat;
+  background-position-x: 100%;
+  background-position-y: 40%;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+}
+
+.home {
+
+  padding: 20% 5%;
+  margin: 0;
+  color: white;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.home h1{
+  position: relative;
+  font-size: 380%;
+}
+
+.home p{
+  position: relative;
+  font-size: 70%;
+  font-style: italic;
+}
+
+.about {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap; 
+  padding: 20px;
+}
+
+.profile {
+  flex: 40%;
+  padding: 0px;
+  text-align: right;
+  font-family: "Crete Round", serif;
+}
+
+.pic{
+  padding: 20px;
+  text-align: center;
+}
+
+.pic img {
+  border-radius: 50%;
+  border: solid  rgba(255, 255, 255, 0.349);
+  height: 210px
+}
+
+.bio {
+  flex: 60%;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.bio h2 {
+  font-size: 250%;
+  text-align: center;
+}
+
+.bio p {
+  text-align: justify;
+  font-size: 130%;
+}
+
+.isi {
+  padding: 0px;
+  background-color: rgba(7, 7, 41, 0.432);
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  height: 700px;
+}
+
+.sosmed ul li  {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+.sosmed {
+  flex: 50%;
+  padding: 50px;
+}
+
+
+.sosmed img {
+  border-radius: 20%;
+  height: 200px;
+  width: 200px;
+}
+
+.kontak {
+  text-align: left;
+  font-family: montserratalternate;
+  flex: 50%;
+  padding: 20px;
+}
+
+.kontak h2 {
+  text-align: center;
+}
+
+.kontak p {
+  color: aqua;
+  text-align: left;
+  font-size: 25px;
+}
+
+.kontak img {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.kontak a {
+  color: aqua;
+  text-decoration: none;
+}
+
+.kontak a:hover{
+  color: white;
+  transition: 0.7s color ease-in;
+}
+
+.education {
+  padding: 10% 20%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  height: 700px;
+}
+
+.sekolah {
+  border: solid 2px rgba(255, 255, 255, 0.651);
+  background-color: rgba(0, 0, 0, 0.616);
+  width: 100%;
+  height: 500px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.sekolah h1 {
+  font-size: 40px;
+}
+
+.sekolah li {
+  text-align: left;
+  padding-left: 20%;
+  font-size: 120%;
+}
+
+
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(5, 5, 5, 0.568);
+  width: 100%;
+  position:  fixed;
+}
+
+
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+  display: inline-block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #111;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+
+/* Saat lebar layar kurang dari 680 pixel, sembunyikan semua menu item kecuali item yang pertama yaitu("Home"). Tampilkan juga list item yang berisi link untuk membuka menu yaitu (li.icon) */
+@media screen and (max-width:680px) {
+  ul.topnav li {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* Class dengan nama "responsive" akan ditambahkan oleh JavaScript saat user mengklik icon. Munculnya Class ini akan mendisplay isi list menu 
+*/
+@media screen and (max-width:700px) {
+  ul.topnav.responsive {position: fixed;}
+  ul.topnav.responsive li.icon {
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 700px){
+  .about{
+      flex-direction: column;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
